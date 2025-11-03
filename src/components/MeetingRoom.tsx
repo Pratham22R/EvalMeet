@@ -9,7 +9,11 @@ import {
 import { LayoutListIcon, LoaderIcon, UsersIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resizable";
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "./ui/resizable";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -35,25 +39,29 @@ function MeetingRoom() {
       </div>
     );
   }
-   
+
   return (
-    <div className="h-[calc(100vh-4rem-1px)]">
+    <div className="h-[calc(100vh-4rem-1px)] bg-background">
       <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel defaultSize={35} minSize={25} maxSize={100} className="relative">
-          {/* VIDEO LAYOUT */}
-          <div className="absolute inset-0">
+        {/* 🎥 LEFT: Video Section */}
+        <ResizablePanel
+          defaultSize={40}
+          minSize={25}
+          maxSize={60}
+          className="relative"
+        >
+          <div className="absolute inset-0 rounded-lg overflow-hidden bg-black">
             {layout === "grid" ? <PaginatedGridLayout /> : <SpeakerLayout />}
 
-            {/* PARTICIPANTS LIST OVERLAY */}
+            {/* 👥 Participants Sidebar */}
             {showParticipants && (
-              <div className="absolute right-0 top-0 h-full w-[300px] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <div className="absolute right-0 top-0 h-full w-[300px] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-l border-border">
                 <CallParticipantsList onClose={() => setShowParticipants(false)} />
               </div>
             )}
           </div>
 
-          {/* VIDEO CONTROLS */}
-
+          {/* 🎛 Video Controls */}
           <div className="absolute bottom-4 left-0 right-0">
             <div className="flex flex-col items-center gap-4">
               <div className="flex items-center gap-2 flex-wrap justify-center px-4">
@@ -94,11 +102,18 @@ function MeetingRoom() {
 
         <ResizableHandle withHandle />
 
-        <ResizablePanel defaultSize={65} minSize={25}>
-          <CodeEditor />
+        {/* 💻 RIGHT: Code Editor + Output Panel */}
+        <ResizablePanel defaultSize={60} minSize={25}>
+          <div className="flex flex-col h-full bg-[#1e1e1e]">
+            {/* Code Editor */}
+            <div className="flex-1 overflow-hidden border-b border-zinc-800">
+              <CodeEditor />
+            </div>
+          </div>
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
   );
 }
+
 export default MeetingRoom;

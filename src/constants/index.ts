@@ -64,6 +64,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
     {
         id: "two-sum",
         title: "Two Sum",
+        difficulty: "Easy",
         description:
             "Given an array of integers `nums` and an integer `target`, return indices of the two numbers in the array such that they add up to `target`.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.",
         examples: [
@@ -102,6 +103,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
     {
         id: "reverse-string",
         title: "Reverse String",
+        difficulty:"Medium",
         description:
             "Write a function that reverses a string. The input string is given as an array of characters `s`.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.",
         examples: [
@@ -133,6 +135,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
     {
         id: "palindrome-number",
         title: "Palindrome Number",
+        difficulty:"Medium",
         description:
             "Given an integer `x`, return `true` if `x` is a palindrome, and `false` otherwise.\n\nAn integer is a palindrome when it reads the same forward and backward.",
         examples: [
@@ -175,6 +178,7 @@ export const LANGUAGES = [
 export interface CodeQuestion {
     id: string;
     title: string;
+    difficulty?: "Easy" | "Medium" | "Hard";
     description: string;
     examples: Array<{
         input: string;
