@@ -29,7 +29,7 @@ function Navbar() {
         {/* Right Section (Buttons) */}
         <SignedIn>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-end">
-            {isInterviewer && (
+            {isInterviewer && pathname !== "/home" && (
               <Button
                 className="border border-[#0ba380] bg-transparent text-[#0ba380] hover:bg-[#0ba380] hover:text-white transition-colors"
               >
