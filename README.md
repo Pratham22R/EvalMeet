@@ -1,5 +1,11 @@
 # EvalMeet 🎥💬
 
+<br />
+    <a href="https://evalmeet.vercel.app/" target="_blank">
+      <img src="public/readme/evalmeetposter.png" alt="Project Banner">
+    </a>
+<br/><br />
+
 **EvalMeet** is a modern, full-stack interview platform built with **Next.js 14**, **Convex**, **Clerk**, and **Stream Video SDK**. It enables seamless technical interviews, real-time collaboration, scheduling, and recording — all with a beautiful UI and a premium developer experience.
 
 🌐 **Live Site**: [evalmeet.vercel.app](https://evalmeet.vercel.app)
@@ -49,33 +55,20 @@ Directory structure:
     └── src/
         ├── middleware.ts
         ├── actions/
-        │   └── stream.actions.ts
         ├── app/
         │   ├── globals.css
         │   ├── layout.tsx
         │   ├── page.tsx
         │   ├── (admin)/
         │   │   └── dashboard/
-        │   │       └── page.tsx
         │   ├── (auth)/
         │   │   ├── layout.tsx
         │   │   ├── home/
-        │   │   │   ├── HomeContent.tsx
-        │   │   │   └── page.tsx
         │   │   ├── meeting/
-        │   │   │   └── [id]/
-        │   │   │       └── page.tsx
         │   │   ├── recordings/
-        │   │   │   └── page.tsx
         │   │   └── schedule/
-        │   │       ├── InterviewScheduleUI.tsx
-        │   │       └── page.tsx
         │   ├── sign-in/
-        │   │   └── [[...sign-in]]/
-        │   │       └── page.tsx
         │   └── sign-up/
-        │       └── [[...sign-up]]/
-        │           └── page.tsx
         ├── components/
         │   ├── ActionCard.tsx
         │   ├── ClientProviders.tsx
@@ -93,43 +86,15 @@ Directory structure:
         │   ├── RecordingCard.tsx
         │   ├── UserInfo.tsx
         │   ├── landing/
-        │   │   ├── CTASection.tsx
-        │   │   ├── FeaturesSection.tsx
-        │   │   ├── Footer.tsx
-        │   │   ├── Header.tsx
-        │   │   ├── HeroSection.tsx
-        │   │   ├── LandingPage.tsx
-        │   │   └── StatsSection.tsx
         │   ├── providers/
         │   │   ├── ConvexClerkProvider.tsx
         │   │   ├── StreamClientProvider.tsx
         │   │   └── ThemeProvider.tsx
         │   └── ui/
-        │       ├── avatar.tsx
-        │       ├── badge.tsx
-        │       ├── button.tsx
-        │       ├── calendar.tsx
-        │       ├── card.tsx
-        │       ├── dialog.tsx
-        │       ├── dropdown-menu.tsx
-        │       ├── input.tsx
-        │       ├── label.tsx
-        │       ├── resizable.tsx
-        │       ├── scroll-area.tsx
-        │       ├── select.tsx
-        │       ├── switch.tsx
-        │       └── textarea.tsx
         ├── constants/
-        │   └── index.ts
         ├── hooks/
-        │   ├── useGetCallById.ts
-        │   ├── useGetCalls.ts
-        │   ├── useMeetingActions.ts
-        │   └── useUserRole.ts
         └── lib/
-            └── utils.ts
 ```
-
 
 ---
 
@@ -148,10 +113,12 @@ Directory structure:
 ## 🧪 Local Development
 
 1. **Clone the repo:**
+
 ```bash
    git clone https://github.com/your-username/pratham22r-evalmeet.git
    cd pratham22r-evalmeet
 ```
+
 2. **Install dependencies:**
 
 ```bash
@@ -173,6 +140,7 @@ Create a .env.local file and add your keys for:
 ```bash
 npm run dev
 ```
+
 ---
 
 ## 📦 Deployment
@@ -188,6 +156,7 @@ Adding the required environment variables
 ---
 
 ## 🤝 Contribution
+
 If you'd like to contribute:
 
 Fork the repo
