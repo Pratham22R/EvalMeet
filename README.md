@@ -1,184 +1,178 @@
-# EvalMeet 🎥💬
+# 🎥💬 EvalMeet —  Technical Interview Platform
 
-<br />
-    <a href="https://evalmeet.vercel.app/" target="_blank">
-      <img src="public/readme/evalmeetposter.png" alt="Project Banner">
-    </a>
-<br/><br />
+<div align="center">
+  <a href="https://evalmeet.vercel.app/" target="_blank">
+    <img src="public/readme/evalmeetposter.png" alt="Project Banner" width="900" height="450"/>
+  </a>
 
-**EvalMeet** is a modern, full-stack interview platform built with **Next.js 14**, **Convex**, **Clerk**, and **Stream Video SDK**. It enables seamless technical interviews, real-time collaboration, scheduling, and recording — all with a beautiful UI and a premium developer experience.
+  <br /><br />
 
-🌐 **Live Site**: [evalmeet.vercel.app](https://evalmeet.vercel.app)
+  <div>
+    <img src="https://img.shields.io/badge/-Next.js-black?style=for-the-badge&logo=next.js&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-Convex-4A90E2?style=for-the-badge&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-Clerk.dev-6C47FF?style=for-the-badge&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-Stream%20Video-00C7B7?style=for-the-badge&logoColor=white"/>
+    <br/>
+    <img src="https://img.shields.io/badge/-TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-Shadcn UI-black?style=for-the-badge&logoColor=white"/>
+    <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+  </div>
+
+  <br />
+
+  <h3 align="center">Real-Time Interviews. Collaboration. Scheduling. Recording. All in One Platform.</h3>
+
+  <a href="https://evalmeet.vercel.app/" target="_blank">
+    🔥 <b>Live Demo</b>
+  </a>
+</div>
 
 ---
 
-## ✨ Features
+## 📋 Table of Contents
 
-- 🔐 **Authentication** via [Clerk](https://clerk.dev)
-- 🎥 **Video Rooms** powered by [Stream Video SDK](https://getstream.io)
-- 🧠 **Smart Interview Tools** — code editor, comments, and scheduling
-- 📼 **Interview Recordings** to revisit candidate sessions
-- 📊 **Admin Dashboard** for managing interview workflows
-- 🌗 **Dark/Light Theme** toggle
-- ⚡ **Convex Backend** for real-time data management
-- 💅 **TailwindCSS + ShadCN/UI** for beautiful UI components
+- ✨ [Introduction](#introduction)
+- ⚙️ [Tech Stack](#tech-stack)
+- 🔋 [Features](#features)
+- 🤸 [Quick Start](#quick-start)
+- 📡 [Environment Variables](#environment-variables)
+- 🧱 [Architecture Overview](#architecture-overview)
+- 🗂️ [Directory Overview](#directory-overview)
+- 🚀 [Deployment](#deployment)
+- 🤝 [Contributing](#contributing)
+- 📬 [Contact](#contact)
 
 ---
 
-## 🗂️ Directory Overview
+## ✨ Introduction
 
+**EvalMeet** is a powerful, modern platform designed for seamless technical interviews with:
+
+- Real-time video calls  
+- Collaborative coding  
+- Commenting & feedback  
+- Scheduling workflows  
+- Automatic recording & playback  
+- Admin dashboards  
+- Beautiful UI powered by Tailwind + Shadcn  
+
+Built with **Next.js 14**, **Convex**, **Clerk**, and **Stream Video SDK**, EvalMeet provides a production-ready interview environment for teams, bootcamps, and organizations.
+
+---
+
+## ⚙️ Tech Stack
+
+### **Frontend**
+- Next.js 14 (App Router)
+- Shadcn/UI
+- TailwindCSS
+- TypeScript
+
+### **Backend**
+- Convex (realtime DB + functions)
+- Stream Video SDK
+- Clerk Authentication
+
+### **Infrastructure**
+- Vercel (hosting)
+- Convex Cloud
+- Stream Cloud Services
+
+---
+
+## 🔋 Features
+
+### 🎥 **Real-Time Video Rooms**
+- HD Stream-powered video  
+- Auto device setup  
+- Participant state tracking  
+- Smooth join/leave UX  
+
+### 🧠 **Interview Tools**
+- Integrated collaborative code editor  
+- Comment dialogs  
+- Realtime updates via Convex  
+
+### 📅 **Scheduling System**
+- Create/edit interview sessions  
+- Dashboard for upcoming meetings  
+- Unified meeting management  
+
+### 📼 **Recordings**
+- Automatic session recording  
+- Playback UI  
+- Timestamps + metadata  
+
+### 📊 **Admin Dashboard**
+- Manage interviews  
+- View recordings  
+- Track user activity  
+
+### 🌗 **Dark/Light Theme**
+- Built-in theme switch using Shadcn  
+
+---
+
+## 🤸 Quick Start
+
+### 1. Clone the Repository
 ```bash
-Directory structure:
-└── pratham22r-evalmeet/
-    ├── README.md
-    ├── components.json
-    ├── next.config.mjs
-    ├── package.json
-    ├── postcss.config.mjs
-    ├── tailwind.config.ts
-    ├── tsconfig.json
-    ├── convex/
-    │   ├── README.md
-    │   ├── auth.config.ts
-    │   ├── comments.ts
-    │   ├── http.ts
-    │   ├── interview.ts
-    │   ├── schema.ts
-    │   ├── tsconfig.json
-    │   ├── users.ts
-    │   └── _generated/
-    │       ├── api.d.ts
-    │       ├── api.js
-    │       ├── dataModel.d.ts
-    │       ├── server.d.ts
-    │       └── server.js
-    └── src/
-        ├── middleware.ts
-        ├── actions/
-        ├── app/
-        │   ├── globals.css
-        │   ├── layout.tsx
-        │   ├── page.tsx
-        │   ├── (admin)/
-        │   │   └── dashboard/
-        │   ├── (auth)/
-        │   │   ├── layout.tsx
-        │   │   ├── home/
-        │   │   ├── meeting/
-        │   │   ├── recordings/
-        │   │   └── schedule/
-        │   ├── sign-in/
-        │   └── sign-up/
-        ├── components/
-        │   ├── ActionCard.tsx
-        │   ├── ClientProviders.tsx
-        │   ├── CodeEditor.tsx
-        │   ├── CommentDialog.tsx
-        │   ├── DasboardBtn.tsx
-        │   ├── EndCallButton.tsx
-        │   ├── LoaderUI.tsx
-        │   ├── MeetingCard.tsx
-        │   ├── MeetingModal.tsx
-        │   ├── MeetingRoom.tsx
-        │   ├── MeetingSetup.tsx
-        │   ├── ModeToggle.tsx
-        │   ├── Navbar.tsx
-        │   ├── RecordingCard.tsx
-        │   ├── UserInfo.tsx
-        │   ├── landing/
-        │   ├── providers/
-        │   │   ├── ConvexClerkProvider.tsx
-        │   │   ├── StreamClientProvider.tsx
-        │   │   └── ThemeProvider.tsx
-        │   └── ui/
-        ├── constants/
-        ├── hooks/
-        └── lib/
+git clone https://github.com/your-username/pratham22r-evalmeet.git
+cd pratham22r-evalmeet
 ```
-
----
-
-## 🚀 Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Auth**: Clerk.dev
-- **Backend**: Convex (Serverless Functions + DB)
-- **Video**: Stream Video SDK
-- **Styling**: TailwindCSS + ShadCN
-- **Type Safety**: TypeScript
-- **Hosting**: Vercel
-
----
-
-## 🧪 Local Development
-
-1. **Clone the repo:**
-
-```bash
-   git clone https://github.com/your-username/pratham22r-evalmeet.git
-   cd pratham22r-evalmeet
-```
-
-2. **Install dependencies:**
-
+### 2. Install Dependencies
 ```bash
 npm install
 ```
+### 3. Add Environment Variables
+```bash
+#Create a .env.local file:
 
-3. **Set up environment variables:**
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+CLERK_WEBHOOK_SECRET=
+NEXT_PUBLIC_CLERK_FRONTEND_API_URL=
 
-Create a .env.local file and add your keys for:
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
 
-    Clerk
-
-    Convex
-
-    Stream
-
-4. **Run the development server:**
-
+NEXT_PUBLIC_STREAM_API_KEY=
+STREAM_SECRET_KEY=
+```
+### 4. Start Development Server
 ```bash
 npm run dev
 ```
-
+### 5. Link on which app is running
+```bash
+http://localhost:3000
+```
 ---
 
-## 📦 Deployment
+## 🧱 Architecture Overview
 
-EvalMeet is deployed on Vercel. You can deploy your own version by:
+### **Frontend (Next.js)**
 
-Forking the repo
+- App Router
+- Server + client components
+- Shadcn UI
 
-Connecting it to Vercel
+### **Backend (Convex)**
 
-Adding the required environment variables
+- Realtime queries/mutations
+- Data models for interviews, comments, recordings
 
----
+### **Video Layer (Stream)**
 
-## 🤝 Contribution
 
-If you'd like to contribute:
+Room creation
 
-Fork the repo
+Recording pipeline
 
-Create a new branch
+Device & participant lifecycle
 
-Submit a pull request
+Auth Layer (Clerk)
 
-Open to ideas, bug fixes, UI enhancements, or documentation help!
+User identity
 
----
-
-## 📬 Contact
-
-Feel free to reach out for collaboration, suggestions, or questions:
-
-    🌐 Website: https://pratham-portfolio-op6k.onrender.com/
-
-    💼 LinkedIn: https://www.linkedin.com/in/pratham-raghuvanshi-9b782127b/
-
-    🐙 GitHub: https://github.com/Pratham22R
-
----
-
-Made with ❤️ by Pratham
+Route protection
