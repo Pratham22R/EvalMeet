@@ -29,22 +29,22 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
-- ✨ [Introduction](#introduction)
-- ⚙️ [Tech Stack](#tech-stack)
-- 🔋 [Features](#features)
-- 🤸 [Quick Start](#quick-start)
-- 📡 [Environment Variables](#environment-variables)
-- 🧱 [Architecture Overview](#architecture-overview)
-- 🗂️ [Directory Overview](#directory-overview)
-- 🚀 [Deployment](#deployment)
-- 🤝 [Contributing](#contributing)
-- 📬 [Contact](#contact)
+-  [Introduction](#introduction)
+-  [Tech Stack](#tech-stack)
+-  [Features](#features)
+-  [Quick Start](#quick-start)
+-  [Environment Variables](#environment-variables)
+-  [Architecture Overview](#architecture-overview)
+-  [Directory Overview](#directory-overview)
+-  [Deployment](#deployment)
+-  [Contributing](#contributing)
+-  [Contact](#contact)
 
 ---
 
-## ✨ Introduction
+##  Introduction
 
 **EvalMeet** is a powerful, modern platform designed for seamless technical interviews with:
 
@@ -60,7 +60,7 @@ Built with **Next.js 14**, **Convex**, **Clerk**, and **Stream Video SDK**, Eval
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 ### **Frontend**
 - Next.js 14 (App Router)
@@ -80,44 +80,44 @@ Built with **Next.js 14**, **Convex**, **Clerk**, and **Stream Video SDK**, Eval
 
 ---
 
-## 🔋 Features
+##  Features
 
-### 🎥 **Real-Time Video Rooms**
+###  **Real-Time Video Rooms**
 - HD Stream-powered video  
 - Auto device setup  
 - Participant state tracking  
 - Smooth join/leave UX  
 
-### 🧠 **Interview Tools**
+###  **Interview Tools**
 - Integrated collaborative code editor  
 - Comment dialogs  
 - Realtime updates via Convex  
 
-### 📅 **Scheduling System**
+###  **Scheduling System**
 - Create/edit interview sessions  
 - Dashboard for upcoming meetings  
 - Unified meeting management  
 
-### 📼 **Recordings**
+###  **Recordings**
 - Automatic session recording  
 - Playback UI  
 - Timestamps + metadata  
 
-### 📊 **Admin Dashboard**
+###  **Admin Dashboard**
 - Manage interviews  
 - View recordings  
 - Track user activity  
 
-### 🌗 **Dark/Light Theme**
+###  **Dark/Light Theme**
 - Built-in theme switch using Shadcn  
 
 ---
 
-## 🤸 Quick Start
+##  Quick Start
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/pratham22r-evalmeet.git
+git clone https://github.com/Pratham22R/EvalMeet.git
 cd pratham22r-evalmeet
 ```
 ### 2. Install Dependencies
@@ -149,7 +149,7 @@ http://localhost:3000
 ```
 ---
 
-## 🧱 Architecture Overview
+##  Architecture Overview
 
 ### **Frontend (Next.js)**
 
@@ -164,15 +164,94 @@ http://localhost:3000
 
 ### **Video Layer (Stream)**
 
+- Room creation
+- Recording pipeline
+- Device & participant lifecycle
 
-Room creation
+### **Auth Layer (Clerk)**
 
-Recording pipeline
+- User identity
+- Route protection
 
-Device & participant lifecycle
+---
 
-Auth Layer (Clerk)
+##  Directory Overview
 
-User identity
+```bash
+pratham22r-evalmeet/
+├── convex/
+│   ├── auth.config.ts
+│   ├── comments.ts
+│   ├── interview.ts
+│   ├── users.ts
+│   └── schema.ts
+├── src/
+│   ├── app/
+│   │   ├── (auth)/sign-in
+│   │   ├── (auth)/sign-up
+│   │   ├── (admin)/dashboard/
+│   │   ├── meeting/
+│   │   ├── recordings/
+│   │   └── schedule/
+│   ├── components/
+│   │   ├── CodeEditor.tsx
+│   │   ├── MeetingRoom.tsx
+│   │   ├── RecordingCard.tsx
+│   │   └── ui/
+│   ├── providers/
+│   ├── constants/
+│   └── hooks/
+├── public/
+└── package.json
+```
 
-Route protection
+---
+
+##  Deployment
+
+### **EvalMeet is optimized for:**
+
+- Vercel → Frontend
+- Convex Cloud → Backend
+- Stream Cloud → Video + Recording
+
+### **Deploy Your Own**
+
+- Fork repo
+- Import to Vercel
+- Add environment variables
+- Deploy 
+
+---
+
+## Contributing
+
+### **Contributions welcome!**
+
+**Steps:**
+
+- Fork
+- Create feature branch
+- Commit
+- Open PR
+
+---
+
+## Contact
+
+- 🌐 [Portfolio](https://pratham-portfolio-op6k.onrender.com)
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/pratham-raghuvanshi-9b782127b)
+
+- 🐙 [GitHub](https://github.com/Pratham22R)
+
+---
+
+## ⭐ Show Support
+
+If you like EvalMeet, consider giving the repo a star 🌟
+Your support helps the project grow!
+
+---
+
+**Made with ❤️ by Pratham**
