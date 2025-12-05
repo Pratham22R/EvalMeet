@@ -35,7 +35,6 @@
 -  [Tech Stack](#tech-stack)
 -  [Features](#features)
 -  [Quick Start](#quick-start)
--  [Environment Variables](#environment-variables)
 -  [Architecture Overview](#architecture-overview)
 -  [Directory Overview](#directory-overview)
 -  [Deployment](#deployment)
@@ -44,7 +43,7 @@
 
 ---
 
-##  Introduction
+##  1. Introduction
 
 **EvalMeet** is a powerful, modern platform designed for seamless technical interviews with:
 
@@ -60,7 +59,7 @@ Built with **Next.js 14**, **Convex**, **Clerk**, and **Stream Video SDK**, Eval
 
 ---
 
-##  Tech Stack
+##  2. Tech Stack
 
 ### **Frontend**
 - Next.js 14 (App Router)
@@ -80,7 +79,7 @@ Built with **Next.js 14**, **Convex**, **Clerk**, and **Stream Video SDK**, Eval
 
 ---
 
-##  Features
+##  3. Features
 
 ###  **Real-Time Video Rooms**
 - HD Stream-powered video  
@@ -113,18 +112,18 @@ Built with **Next.js 14**, **Convex**, **Clerk**, and **Stream Video SDK**, Eval
 
 ---
 
-##  Quick Start
+##  4. Quick Start
 
-### 1. Clone the Repository
+- ###  Clone the Repository
 ```bash
 git clone https://github.com/Pratham22R/EvalMeet.git
 cd pratham22r-evalmeet
 ```
-### 2. Install Dependencies
+- ###  Install Dependencies
 ```bash
 npm install
 ```
-### 3. Add Environment Variables
+- ###  Add Environment Variables
 ```bash
 #Create a .env.local file:
 
@@ -139,17 +138,17 @@ NEXT_PUBLIC_CONVEX_URL=
 NEXT_PUBLIC_STREAM_API_KEY=
 STREAM_SECRET_KEY=
 ```
-### 4. Start Development Server
+- ###  Start Development Server
 ```bash
 npm run dev
 ```
-### 5. Link on which app is running
+- ###  Link on which app is running
 ```bash
 http://localhost:3000
 ```
 ---
 
-##  Architecture Overview
+##  5. Architecture Overview
 
 ### **Frontend (Next.js)**
 
@@ -175,7 +174,7 @@ http://localhost:3000
 
 ---
 
-##  Directory Overview
+##  6. Directory Overview
 
 ```bash
 pratham22r-evalmeet/
@@ -207,7 +206,7 @@ pratham22r-evalmeet/
 
 ---
 
-##  Deployment
+##  7. Deployment
 
 ### **EvalMeet is optimized for:**
 
@@ -224,7 +223,7 @@ pratham22r-evalmeet/
 
 ---
 
-## Contributing
+## 8. Contributing
 
 ### **Contributions welcome!**
 
@@ -237,7 +236,7 @@ pratham22r-evalmeet/
 
 ---
 
-## Contact
+## 9. Contact
 
 - 🌐 [Portfolio](https://pratham-portfolio-op6k.onrender.com)
 
@@ -247,7 +246,7 @@ pratham22r-evalmeet/
 
 ---
 
-## ⭐ Show Support
+## 10. ⭐ Show Support
 
 If you like EvalMeet, consider giving the repo a star 🌟
 Your support helps the project grow!
